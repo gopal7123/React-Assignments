@@ -1,1 +1,44 @@
+.yellow,.blue {
+    display: flex;
+    flex-flow: row;
+}
 
+.red {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.yellow .content {
+    width: 100%;
+    margin: 10px;
+    background-color: orange;
+    height: 150px;
+}
+
+.red .content {
+    width: 100%;
+    margin: 10px;
+    background-color: coral;
+    height: 150px;
+}
+
+.blue .content {
+    width: 100%;
+    margin: 10px;
+    background-color: blue;
+    height: 150px;
+}
+
+/* -------- min width : 768px ------------------*/
+@media screen and (min-device-width:768px) and (max-device-width:1023px) {
+    .blue {
+        flex-direction: column;
+    }
+}
+
+/* -------- min width : 320px ------------------*/
+@media screen and (min-device-width:320px) and (max-device-width:767px) {
+    .yellow, .blue {
+        flex-direction: column;
+    }
+}
